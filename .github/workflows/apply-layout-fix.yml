@@ -1,4 +1,4 @@
-name: Apply responsive portfolio fix
+name: Apply Aura page fit fix
 on:
   push:
     paths:
@@ -6,17 +6,17 @@ on:
 permissions:
   contents: write
 jobs:
-  fix-layout:
+  fix-aura:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Add responsive safeguards
+      - name: Fit Aura hero image
         env:
-          FIX_B64: CjxzdHlsZT4KLyogTGl2ZS1zaXRlIHJlc3BvbnNpdmUgc2FmZWd1YXJkcyAqLwpAbWVkaWEgc2NyZWVuIGFuZCAobWluLXdpZHRoOjkwMXB4KXsjb3V0Y29tZSAub3V0Y29tZS1ncmlke21pbi1oZWlnaHQ6MDtvdmVyZmxvdzpoaWRkZW47Z3JpZC10ZW1wbGF0ZS1yb3dzOm1pbm1heCgwLDFmcil9I291dGNvbWUgLm91dGNvbWUtZ3JpZD4ubGFyZ2UsI291dGNvbWUgLm91dGNvbWUtc3RhY2t7aGVpZ2h0OjEwMCUhaW1wb3J0YW50O21pbi1oZWlnaHQ6MCFpbXBvcnRhbnQ7bWF4LWhlaWdodDoxMDAlO292ZXJmbG93OmhpZGRlbn0jb3V0Y29tZSAub3V0Y29tZS1zdGFja3tncmlkLXRlbXBsYXRlLXJvd3M6bWlubWF4KDAsMWZyKSBtaW5tYXgoMCwxZnIpfSNvdXRjb21lIC5vdXRjb21lLXN0YWNrIC5mcmFtZXtoZWlnaHQ6MTAwJSFpbXBvcnRhbnQ7bWluLWhlaWdodDowIWltcG9ydGFudDttYXgtaGVpZ2h0OjEwMCV9I291dGNvbWUgLm91dGNvbWUtZ3JpZCBpbWd7d2lkdGg6MTAwJSFpbXBvcnRhbnQ7aGVpZ2h0OjEwMCUhaW1wb3J0YW50O29iamVjdC1maXQ6Y29udGFpbiFpbXBvcnRhbnR9fQpAbWVkaWEgc2NyZWVuIGFuZCAobWF4LXdpZHRoOjkwMHB4KXtib2R5e292ZXJmbG93LXg6aGlkZGVufS5mb2xpby1ib2FyZHttYXJnaW46MTBweCBhdXRvO3dpZHRoOmNhbGMoMTAwJSAtIDE2cHgpfS5mb2xpby1ib2FyZD4ud3JhcHtwYWRkaW5nOjU0cHggY2xhbXAoMjJweCw1dncsMzhweCl9Lmhlcm97bWluLWhlaWdodDpjYWxjKDEwMHN2aCAtIDc2cHgpfS5oZXJvPi53cmFwe2hlaWdodDpjYWxjKDEwMHN2aCAtIDc2cHgpfS5oZXJvIGgxe3dpZHRoOjkyJTttYXgtd2lkdGg6NjgwcHg7dGV4dC1hbGlnbjpjZW50ZXI7d2hpdGUtc3BhY2U6bm9ybWFsO2ZvbnQtc2l6ZTpjbGFtcCg0OHB4LDEzdncsOTJweCk7bGluZS1oZWlnaHQ6Ljl9I2F1cmEsI2FydGhpYWlye21pbi1oZWlnaHQ6Y2xhbXAoNTIwcHgsNzZzdmgsNzYwcHgpfSNhdXJhPi53cmFwLCNhcnRoaWFpcj4ud3JhcHtoZWlnaHQ6Y2xhbXAoNTIwcHgsNzZzdmgsNzYwcHgpfSNhdXJhIC5wcm9qZWN0LWhlYWQ+ZGl2LCNhcnRoaWFpciAucHJvamVjdC1oZWFkPmRpdntsZWZ0OmNsYW1wKDI0cHgsNnZ3LDUycHgpO3RvcDpjbGFtcCgyOHB4LDd2dyw1OHB4KTttYXgtd2lkdGg6ODIlfSNhdXJhe2JhY2tncm91bmQtc2l6ZTpjb3ZlciFpbXBvcnRhbnQ7YmFja2dyb3VuZC1wb3NpdGlvbjpjZW50ZXIgNTglIWltcG9ydGFudH0jYXJ0aGlhaXIgLnByb2R1Y3Qtc3RhZ2V7YmFja2dyb3VuZC1zaXplOmNvbnRhaW4haW1wb3J0YW50O2JhY2tncm91bmQtcmVwZWF0Om5vLXJlcGVhdCFpbXBvcnRhbnR9I291dGNvbWUgLm91dGNvbWUtZ3JpZHtvdmVyZmxvdzp2aXNpYmxlfX0KQG1lZGlhIHNjcmVlbiBhbmQgKG1heC13aWR0aDo1NjBweCl7LmZvbGlvLWJvYXJkPi53cmFwe3BhZGRpbmc6NDhweCAyMHB4fS5oZXJvIGgxe2ZvbnQtc2l6ZTpjbGFtcCg0MnB4LDE1dncsNzBweCk7bGV0dGVyLXNwYWNpbmc6LjAyZW19Lmhlcm8gLmtpY2tlcntib3R0b206ODJweH0uaGVybyAuaGVyby1jb3B5e21heC13aWR0aDo3OCV9I2F1cmEgLnByb2plY3QtdGl0bGUsI2FydGhpYWlyIC5wcm9qZWN0LXRpdGxle2ZvbnQtc2l6ZTpjbGFtcCgyN3B4LDEwdncsNDJweCl9Zm9vdGVye3dpZHRoOmNhbGMoMTAwJSAtIDE2cHgpO3BhZGRpbmc6MzBweCAyNHB4fS5mb290ZXItbm90ZXt0ZXh0LWFsaWduOmxlZnQ7bWFyZ2luLXRvcDoyMHB4fX0KPC9zdHlsZT4K
+          FIX_B64: PHN0eWxlPi8qIEF1cmEgZnVsbC1pbWFnZSBmaXQgKi8jYXVyYXtiYWNrZ3JvdW5kLXNpemU6Y29udGFpbiFpbXBvcnRhbnQ7YmFja2dyb3VuZC1wb3NpdGlvbjpjZW50ZXIhaW1wb3J0YW50O2JhY2tncm91bmQtcmVwZWF0Om5vLXJlcGVhdCFpbXBvcnRhbnQ7YmFja2dyb3VuZC1jb2xvcjojYmM4ZThjIWltcG9ydGFudH08L3N0eWxlPg==
         run: |
           python -c "import os,base64; open('index.html','ab').write(base64.b64decode(os.environ['FIX_B64']))"
           git config user.name github-actions
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
           git add index.html
-          git commit -m "Fix responsive portfolio layout"
+          git commit -m "Show full Aura hero image"
           git push
